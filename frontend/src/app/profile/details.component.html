@@ -1,0 +1,23 @@
+<h2 style="color: #fff; text-align: center; margin-bottom: 20px;">My Profile</h2>
+
+<div style="background-color: #1f1f1f; color: #ddd; border-radius: 8px; max-width: 500px; margin: 0 auto;">
+  <div class="card-body" style="padding: 20px;">
+    <div class="mb-2">
+      <strong>Name:</strong> {{account.title}} {{account.firstName}} {{account.lastName}}
+    </div>
+    <div class="mb-2">
+      <strong>Email:</strong> {{account.email}}
+    </div>
+    <div class="mb-2">
+      <strong>Role:</strong> {{account.role}}
+    </div>
+    <div class="mb-2">
+      <strong>Status:</strong> {{account.status}}
+    </div>
+    <div class="mt-3 text-center">
+      <a routerLink="update" class="btn btn-primary">
+        <i class="fas fa-edit me-1"></i> Update Profile
+      </a>
+    </div>
+  </div>
+</div>

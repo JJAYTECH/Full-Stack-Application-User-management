@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User Management System
 
 Diaz_Backend Branch
@@ -127,3 +128,6 @@ npm start
 ## Deployment
 
 The project includes Docker support for containerized deployment. For production deployment, set the appropriate environment variables in the backend's `.env` file or through your deployment platform.
+=======
+# Full-Stack-Application-User-management
+>>>>>>> frontend-backend_CANETE

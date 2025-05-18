@@ -11,6 +11,7 @@ import { ForgotPasswordComponent } from './forgot-password.component';
 import { ResetPasswordComponent } from './reset-password.component';
 
 @NgModule({
+<<<<<<< HEAD
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -26,3 +27,20 @@ import { ResetPasswordComponent } from './reset-password.component';
   ]
 })
 export class AccountModule {}
+=======
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        AccountRoutingModule
+    ],
+    declarations: [
+        LayoutComponent,
+        LoginComponent,
+        RegisterComponent,
+        VerifyEmailComponent,
+        ForgotPasswordComponent,
+        ResetPasswordComponent
+    ]
+})
+export class AccountModule { } 
+>>>>>>> frontend-backend_CANETE

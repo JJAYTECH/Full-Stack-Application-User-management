@@ -1,0 +1,15 @@
+{
+  "/accounts": {
+    "target": "full-stack-application-user-management.onrender.com",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/accounts": "/accounts"
+    },
+    "headers": {
+      "Connection": "keep-alive"
+    },
+    "cookieDomainRewrite": "localhost"
+  }
+} 

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "database": {
         "url": "postgresql://postgres:sUxsItmJrZPtBPcYNmSdiFRqTooYZiox@gondola.proxy.rlwy.net:59248/railway",
         "ssl": true
@@ -12,4 +13,58 @@
             "pass": "evjf ytho yuie bzfe"
         }
     }
+=======
+  "development": {
+    "database": {
+      "host": "153.92.15.31",
+      "user": "u875409848_diaz",
+      "password": "9T2Z5$3UKkgSYzE",
+      "database": "u875409848_diaz"
+    },
+    "secret": "STARTTLS_DEV_SECRET",
+    "emailFrom": "elvendiaz05@gmail.com",
+    "smtpOptions": {
+      "host": "smtp.gmail.com",
+      "port": 465,
+      "secure": true,
+      "auth": {
+        "user": "elvendiaz05@gmail.com",
+        "pass": "efff ijhn wpbs arag"
+      },
+      "tls": {
+        "rejectUnauthorized": false
+      },
+      "debug": true,
+      "logger": true,
+      "disableFileAccess": true,
+      "disableUrlAccess": true
+    }
+  },
+  "production": {
+    "database": {
+      "host": "153.92.15.31",
+      "user": "u875409848_diaz",
+      "password": "9T2Z5$3UKkgSYzE",
+      "database": "u875409848_diaz"
+    },
+    "secret": "STARTTLS",
+    "emailFrom": "elvendiaz05@gmail.com",
+    "smtpOptions": {
+      "host": "smtp.gmail.com",
+      "port": 465,
+      "secure": true,
+      "auth": {
+        "user": "elvendiaz05@gmail.com",
+        "pass": "efff ijhn wpbs arag"
+      },
+      "tls": {
+        "rejectUnauthorized": false
+      },
+      "debug": true,
+      "logger": true,
+      "disableFileAccess": true,
+      "disableUrlAccess": true
+    }
+  }
+>>>>>>> frontend-backend_CANETE
 }

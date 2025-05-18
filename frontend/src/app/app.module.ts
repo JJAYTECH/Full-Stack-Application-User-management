@@ -3,7 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+<<<<<<< HEAD
 // used to create fake backend
+=======
+>>>>>>> frontend-backend_CANETE
 import { fakeBackendProvider } from './_helpers';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,8 +34,16 @@ import { HomeComponent } from './home';
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
     // provider used to create fake backend
+<<<<<<< HEAD
     // fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+=======
+    //fakeBackendProvider
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+>>>>>>> frontend-backend_CANETE

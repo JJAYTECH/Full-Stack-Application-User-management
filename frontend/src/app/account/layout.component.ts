@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import { AccountService } from '@app/_services';
 
+<<<<<<< HEAD
 @Component({
   templateUrl: 'layout.component.html'
 })
@@ -16,4 +17,17 @@ export class LayoutComponent {
       this.router.navigate(['/']);
     }
   }
+=======
+@Component({ templateUrl: 'layout.component.html' })
+export class LayoutComponent {
+    constructor(
+        private router: Router,
+        private accountService: AccountService
+    ) {
+        // redirect to home if already logged in
+        if (this.accountService.accountValue) {
+            this.router.navigate(['/']);
+        }
+    }
+>>>>>>> frontend-backend_CANETE
 }

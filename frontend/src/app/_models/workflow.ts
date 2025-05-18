@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // _models/workflow.ts
 import { Employee } from './employee';
 
@@ -24,3 +25,21 @@ export class Workflow {
         }
     }
 }
+=======
+import { Employee } from './employee';
+
+export class Workflow {
+    id?: number;
+    employeeId?: number;
+    type?: string;
+    details?: any;
+    status?: string;
+    created?: Date;
+    
+    // Navigation properties
+    employee?: Employee;
+    
+    // UI properties
+    updating?: boolean;
+} 
+>>>>>>> frontend-backend_CANETE

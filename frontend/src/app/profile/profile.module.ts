@@ -19,4 +19,8 @@ import { UpdateComponent } from './update.component';
     UpdateComponent
   ]
 })
+<<<<<<< HEAD
 export class ProfileModule {}
+=======
+export class ProfileModule { }
+>>>>>>> frontend-backend_CANETE

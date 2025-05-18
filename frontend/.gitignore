@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 /node_modules
+=======
+node_modules
+>>>>>>> frontend-backend_CANETE
 # Compiled source
 # Logs
 npm-debug.log*
 yarn-debug.log*
+<<<<<<< HEAD
 
 
 /tmp
@@ -10,12 +15,24 @@ yarn-debug.log*
 
 /dist
 
+=======
+# compiled output
+/dist
+/tmp
+/out-tsc
+>>>>>>> frontend-backend_CANETE
 # Only exists if Bazel was run
 /bazel-out
 
 # dependencies
 /node_modules
 
+<<<<<<< HEAD
+=======
+.angular/cache/
+
+
+>>>>>>> frontend-backend_CANETE
 # profiling files
 chrome-profiler-events*.json
 speed-measure-plugin*.json
@@ -50,6 +67,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
 
 
 /.angular
+=======
+>>>>>>> frontend-backend_CANETE

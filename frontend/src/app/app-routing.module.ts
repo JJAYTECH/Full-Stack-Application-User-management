@@ -10,6 +10,7 @@ const adminModule = () => import('./admin/admin.module').then(x => x.AdminModule
 const profileModule = () => import('./profile/profile.module').then(x => x.ProfileModule);
 
 const routes: Routes = [
+<<<<<<< HEAD
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'account', loadChildren: accountModule },
   { path: 'profile', loadChildren: profileModule, canActivate: [AuthGuard] },
@@ -22,3 +23,19 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+=======
+    { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: 'account', loadChildren: accountModule },
+    { path: 'admin', loadChildren: adminModule, canActivate: [AuthGuard], data: { roles: [Role.Admin] } },
+    { path: 'profile', loadChildren: profileModule, canActivate: [AuthGuard] },
+    
+    // otherwise redirect to home
+    { path: '**', redirectTo: '' }
+];
+
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule { }
+>>>>>>> frontend-backend_CANETE

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // admin/departments/add-edit.component.ts
+=======
+>>>>>>> frontend-backend_CANETE
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -8,10 +11,18 @@ import { DepartmentService, AlertService } from '@app/_services';
 
 @Component({ templateUrl: 'add-edit.component.html' })
 export class AddEditComponent implements OnInit {
+<<<<<<< HEAD
     form: FormGroup;
     id: number;
     isAddMode: boolean;
     loading = false;
+=======
+    form!: FormGroup;
+    id?: number;
+    title!: string;
+    loading = false;
+    submitting = false;
+>>>>>>> frontend-backend_CANETE
     submitted = false;
 
     constructor(
@@ -20,16 +31,25 @@ export class AddEditComponent implements OnInit {
         private router: Router,
         private departmentService: DepartmentService,
         private alertService: AlertService
+<<<<<<< HEAD
     ) { }
 
     ngOnInit() {
         this.id = this.route.snapshot.params['id'];
         this.isAddMode = !this.id;
 
+=======
+    ) {}
+
+    ngOnInit() {
+        this.id = this.route.snapshot.params['id'];
+        
+>>>>>>> frontend-backend_CANETE
         this.form = this.formBuilder.group({
             name: ['', Validators.required],
             description: ['']
         });
+<<<<<<< HEAD
 
         if (!this.isAddMode) {
             this.departmentService.getById(this.id)
@@ -88,3 +108,54 @@ export class AddEditComponent implements OnInit {
             });
     }
 }
+=======
+        
+        this.title = 'Add Department';
+        if (this.id) {
+            // edit mode
+            this.title = 'Edit Department';
+            this.loading = true;
+            this.departmentService.getById(this.id)
+                .pipe(first())
+                .subscribe(department => {
+                    this.form.patchValue(department);
+                    this.loading = false;
+                });
+        }
+    }
+    
+    get f() { return this.form.controls; }
+    
+    onSubmit() {
+        this.submitted = true;
+        
+        // reset alerts on submit
+        this.alertService.clear();
+        
+        // stop here if form is invalid
+        if (this.form.invalid) {
+            return;
+        }
+        
+        this.submitting = true;
+        this.saveDepartment()
+            .pipe(first())
+            .subscribe({
+                next: () => {
+                    this.alertService.success('Department saved successfully', { keepAfterRouteChange: true });
+                    this.router.navigateByUrl('/admin/departments');
+                },
+                error: error => {
+                    this.alertService.error(error);
+                    this.submitting = false;
+                }
+            });
+    }
+    
+    private saveDepartment() {
+        return this.id
+            ? this.departmentService.update(this.id, this.form.value)
+            : this.departmentService.create(this.form.value);
+    }
+} 
+>>>>>>> frontend-backend_CANETE

@@ -1,0 +1,39 @@
+<!-- admin/list.component -->
+
+<h1>Accounts</h1>
+<p>All accounts from secure (admin only) API endpoint:</p>
+<a routerLink="/admin/accounts/add" class="btn btn-sm btn-success mb-2">Create Account</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width:30%">Name</th>
+            <th style="width:30%">Email</th>
+            <th style="width:30%">Role</th>
+            <th style="width:30%">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td>{{ account.firstName }} {{ account.lastName }}</td>
+            <td>{{ account.email }}</td>
+            <td>{{ account.role }}</td>
+            <td>
+                <span class="badge" [ngClass]="{
+                    'badge-success': account.status === 'active',
+                    'badge-danger': account.status === 'inactive'
+                }">
+                    {{ account.status.charAt(0).toUpperCase() + account.status.slice(1).toLowerCase() }}
+                </span>
+            </td>
+            <td style="white-space: nowrap">
+                <button [routerLink]="['/admin/accounts/edit', account.id]" class="btn btn-sm btn-primary mr-1">Edit</button>
+            </td>
+        </tr>
+        <tr *ngIf="!accounts">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>

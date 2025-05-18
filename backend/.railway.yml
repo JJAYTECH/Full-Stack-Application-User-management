@@ -1,0 +1,8 @@
+# .railway.yml
+
+name: backend
+service:
+  environment:
+    NODE_VERSION: "18"
+  build:
+    command: "npm install && npm run start"

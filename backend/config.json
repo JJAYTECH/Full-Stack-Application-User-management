@@ -1,0 +1,15 @@
+{
+    "database": {
+        "url": "postgresql://postgres:sUxsItmJrZPtBPcYNmSdiFRqTooYZiox@gondola.proxy.rlwy.net:59248/railway",
+        "ssl": true
+    },
+    "secret": "secretmakabawpalangka",
+    "smtpOptions": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "auth": {
+            "user": "huntersungjinwoo321@gmail.com",
+            "pass": "evjf ytho yuie bzfe"
+        }
+    }
+}

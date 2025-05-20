@@ -86,4 +86,4 @@ function authorize(roles = []) {
 >>>>>>> frontend-backend_CANETE
         }
     ];
-}
+//Roldan\\
